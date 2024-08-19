@@ -1,0 +1,52 @@
+vlib work
+vlog -f sys.txt
+vsim -voptargs=+accs work.SYS_TOP_tb
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/UART_RX/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/DATA_SYNC/*
+add wave -position insertpoint  \
+sim:/SYS_TOP_tb/DUT/REG_FILE/WIDTH \
+sim:/SYS_TOP_tb/DUT/REG_FILE/DEPTH \
+sim:/SYS_TOP_tb/DUT/REG_FILE/CLK \
+sim:/SYS_TOP_tb/DUT/REG_FILE/RST \
+sim:/SYS_TOP_tb/DUT/REG_FILE/WrEn \
+sim:/SYS_TOP_tb/DUT/REG_FILE/RdEn \
+sim:/SYS_TOP_tb/DUT/REG_FILE/Address \
+sim:/SYS_TOP_tb/DUT/REG_FILE/WrData \
+sim:/SYS_TOP_tb/DUT/REG_FILE/RdData_valid \
+sim:/SYS_TOP_tb/DUT/REG_FILE/RdData \
+sim:/SYS_TOP_tb/DUT/REG_FILE/REG0 \
+sim:/SYS_TOP_tb/DUT/REG_FILE/REG1 \
+sim:/SYS_TOP_tb/DUT/REG_FILE/REG2 \
+sim:/SYS_TOP_tb/DUT/REG_FILE/REG3 \
+sim:/SYS_TOP_tb/DUT/REG_FILE/REGFILE \
+sim:/SYS_TOP_tb/DUT/REG_FILE/i
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/ALU/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/CLK_GATE/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/RST_SYNC_1/*
+add wave -position insertpoint  \
+sim:/SYS_TOP_tb/DUT/ASYNC_FIFO_TOP/FIFO_MEM/FIFO_MEM
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/ASYNC_FIFO_TOP/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/PULSE_GEN/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/RST_SYNC_2/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/UART_TX/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/CLK_DIV_1/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/CLK_DIV_2/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/CLKDIV_MUX/*
+add wave -position insertpoint sim:/SYS_TOP_tb/DUT/SYS_CTRL/*
+add wave -position insertpoint  \
+sim:/SYS_TOP_tb/WIDTH \
+sim:/SYS_TOP_tb/DEPTH \
+sim:/SYS_TOP_tb/NUM_STAGES \
+sim:/SYS_TOP_tb/UART_CLK_1 \
+sim:/SYS_TOP_tb/REF_CLK_1 \
+sim:/SYS_TOP_tb/TX_CLK_1 \
+sim:/SYS_TOP_tb/prescale \
+sim:/SYS_TOP_tb/RX_IN \
+sim:/SYS_TOP_tb/RST \
+sim:/SYS_TOP_tb/UART_CLK \
+sim:/SYS_TOP_tb/REF_CLK \
+sim:/SYS_TOP_tb/TX_OUT \
+sim:/SYS_TOP_tb/TX_CLK \
+sim:/SYS_TOP_tb/i \
+sim:/SYS_TOP_tb/k
+run -all
